@@ -10,7 +10,7 @@ load_dotenv()
 st.set_page_config(page_title="Simple Chatbot")
 
 # The title
-st.title("Simple Gemini Chatbot")
+st.title("Suhavani's Simple Gemini Chatbot")
 st.write("Ask me anything!")
 
 # Get API key from environment
@@ -19,7 +19,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
     # Configuring gemini
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-flash-latest')
     
     # User input
     user_question = st.text_input("Your question:", key="question")
